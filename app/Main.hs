@@ -48,6 +48,9 @@ server = do
 
     middleware logStdoutDev
 
+    get "/" do
+        text "POST to / with req format {input {arg1 {username password}}}"
+
     post "/" do
         Req (Payload (Login user pass)) <- jsonData
         json $ mkToken user pass
