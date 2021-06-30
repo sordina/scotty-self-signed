@@ -19,7 +19,7 @@ But should succeed if insecure requests are allowed:
 
 ```
 > curl -k https://localhost:443/
-<h1>404: File Not Found!</h1>
+POST to / with req format {input {arg1 {username password}}}
 ```
 
 The correct format for a request is like so:
